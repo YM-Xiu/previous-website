@@ -5,4 +5,4 @@
 
 ## Link to my Bilibili account
 
-[Tap here to follow!](https://github.com/)
+[link to fast.ai](https://www.fast.ai)
