@@ -1,4 +1,4 @@
-# Welcome to Kevin. Y. Xiu's blog！
+# Welcome to Kevin's blog！
 
 
 ![Image of fast.ai logo](images/MCoC_WomenOfPower_Wallpaper_1920x1080.png)
