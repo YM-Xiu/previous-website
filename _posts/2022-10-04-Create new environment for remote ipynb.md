@@ -13,3 +13,7 @@
 5. ctrl shift p，输入jupyter，选择“Specify local or remote Jupyter server for connections”, 选default （在已经连上服务器的情况下，服务器就是本地）
 
 6. 重启vscode，再次打开后，点击ipynb文件的run all，vscode会提示你选择一个环境，之前建立的环境此时应该已经可以被显示出来。
+
+## 2022.10.11 更新：
+
+在完成5后，如果没有效果，可以尝试在5中选择指定某个server，然后会发现现在一个server都找不到了。接下来，再重复一遍5（选择default）和6的操作，之后大概率就可以看到我们需要的环境了。
