@@ -9,6 +9,8 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+  
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
 
   {% if site.use_math %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
@@ -49,49 +51,17 @@
   }
   window.onload = wrap_img;
   </script>
+  
+  <body>
 
-</head>
-
-<head>
-  <!-- ... -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
-  />
-  <!-- ... -->
-</head>
-
-<body>
-  <!-- ... -->
   <div id="waline"></div>
-  <script>
-  function wrap_img(fn) {
-    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
-        var elements = document.querySelectorAll(".post img");
-        Array.prototype.forEach.call(elements, function(el, i) {
-            if (el.getAttribute("title")) {
-                const caption = document.createElement('figcaption');
-                var node = document.createTextNode(el.getAttribute("title"));
-                caption.appendChild(node);
-                const wrapper = document.createElement('figure');
-                wrapper.className = 'image';
-                el.parentNode.insertBefore(wrapper, el);
-                el.parentNode.removeChild(el);
-                wrapper.appendChild(el);
-                wrapper.appendChild(caption);
-            }
-        });
-    } else { document.addEventListener('DOMContentLoaded', fn); }
-  }
-  window.onload = wrap_img;
-  </script>
-  <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    <script>
+      Waline({
+        el: '#waline',
+        serverURL: 'https://waline-test-2022-12-07-i5mj1x5v4-ym-xiu.vercel.app/',
+      });
+    </script>
+  </body>
 
-    init({
-      el: '#waline',
-      serverURL: 'https://waline-test-2022-12-07-i5mj1x5v4-ym-xiu.vercel.app',
-    });
-  </script>
-</body>
+</head>
 
