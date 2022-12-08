@@ -60,6 +60,7 @@
   />
   <!-- ... -->
 </head>
+
 <body>
   <!-- ... -->
   <div id="waline"></div>
@@ -70,6 +71,27 @@
       el: '#waline',
       serverURL: 'https://waline-test-2022-12-07-i5mj1x5v4-ym-xiu.vercel.app',
     });
+  </script>
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
   </script>
 </body>
 
