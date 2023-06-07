@@ -35,7 +35,7 @@ titles_from_headings:
   
 waline:
   enable: false #是否开启
-  serverURL: waline-server-ecru.vercel.app # Waline #服务端地址，我们这里就是上面部署的 Vercel 地址
+  serverURL: # waline-server-ecru.vercel.app # Waline #服务端地址，我们这里就是上面部署的 Vercel 地址
   locale:
     placeholder: Welcome! # #评论框的默认文字
   avatar: mm # 头像风格
