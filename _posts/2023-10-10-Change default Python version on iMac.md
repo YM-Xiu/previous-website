@@ -18,6 +18,8 @@
 
 3. 加入：alias python="~/opt/anaconda3/envs/xxx/bin/python" (重点，相当于说，conda activate的环境还是没有起作用，使用的还是默认路径。但是我们把默认路径修改为了我们要activate的路径= =。也就是说以后每次换环境都要改一下这句 = =。)
 
+4. 更新环境变量使之生效：source ~/.zshrc
+
 再次在terminal中输入“python”，显示版本正确。运行程序，可以运行。
 
 
