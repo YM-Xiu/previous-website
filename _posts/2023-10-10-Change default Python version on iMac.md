@@ -46,7 +46,7 @@ alias env2="~/opt/anaconda3/envs/env2/bin/python"
 
 解决方案：
 
-修改"pip install xxx" 为 "python -m pip install xxx" (当然，如果采用了上一节的方案，就应写为env1 -m pip install xxx...)
+conda activate env1, 修改"pip install xxx" 为 "python -m pip install xxx" (当然，如果采用了上一节的方案，就应写为env1 -m pip install xxx...)
 
 
 
