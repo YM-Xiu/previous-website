@@ -22,4 +22,29 @@
 
 
 
+-------------------------------------------------------------------------
+
+### 突发奇想
+
+那也就是说，我可以直接把每个环境名都alias一下？例如：
+
+alias env1="~/opt/anaconda3/envs/env1/bin/python"
+alias env2="~/opt/anaconda3/envs/env2/bin/python"
+...
+
+然后我就可以把"python xx.py" 改为直接用 "env1 xx.py"，甚至不用conda activate？
+
+有空试试。。。
+
+
+
+### 关于上一节设想如果实现，怎么在已有的环境中安装新package的问题：
+
+实际上lab mac经常出现打开某环境后，pip install package没有装在这个环境的情况。
+
+解决方案：
+
+修改"pip install xxx" 为 "python -m pip install xxx" (当然，如果采用了上一节的方案，就应写为env1 -m pip install xxx...)
+
+
 
