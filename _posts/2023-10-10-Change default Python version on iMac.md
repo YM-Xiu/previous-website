@@ -10,7 +10,7 @@
 
 临时解决方案：更改默认python 版本。
 
-我的流程：（参考：https://blog.csdn.net/u012033124/article/details/88894834）
+我的流程：（参考：https://blog.csdn.net/u012033124/article/details/88894834 ）
 
 1. vim ~/.zshrc (打开环境变量)；
 
