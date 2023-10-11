@@ -29,7 +29,9 @@
 那也就是说，我可以直接把每个环境名都alias一下？例如：
 
 alias env1="~/opt/anaconda3/envs/env1/bin/python"
+
 alias env2="~/opt/anaconda3/envs/env2/bin/python"
+
 ...
 
 然后我就可以把"python xx.py" 改为直接用 "env1 xx.py"，甚至不用conda activate？
